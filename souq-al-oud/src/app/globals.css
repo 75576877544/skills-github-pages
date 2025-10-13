@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0B0C; /* deep charcoal */
+  --foreground: #F1EFEA; /* warm off-white */
+  --accent: #C8A86B; /* oud gold */
+  --accent-2: #8B6B3E; /* warm brown */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-cairo);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* keep a light theme option if needed */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-cairo), system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+/* utility for Arabic headings */
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.brand-accent {
+  color: var(--accent);
+}
